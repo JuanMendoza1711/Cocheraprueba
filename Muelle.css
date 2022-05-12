@@ -1,0 +1,3600 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: white;
+	font-size: 5px;
+}
+
+/* ----- Barra de navegación -------*/
+html {
+	scroll-behavior: smooth;
+}
+
+.barra {
+	width: 100%;
+	background: #202020;
+	height: auto;
+	overflow: hidden;
+	padding: 1.5% 0;
+	display: flex;
+	border: #202020 0.1px solid;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 10;
+}
+.logo {
+	padding: 0 5%;
+	width: 12%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 50%;
+	display: flex;
+	border: #202020 0.1px solid;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 3em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .6s ease all;
+	position: relative;
+	overflow: hidden;
+}
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+.boton.animado {
+	background: none;
+	width: 100%;
+	font-size: 3em;
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: #FFD100;
+	stroke-width: 3%;
+	stroke-dasharray: 450;
+	stroke-dashoffset: 450;
+	transition: .6s ease all;
+}
+
+.boton.animado:hover rect {
+	stroke-dashoffset: 0;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 15em;
+	left: 0;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 4.5%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  padding: 0.5% 1%;
+  color: white;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 5em;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background:rgba(20, 20, 20, 0.9) ;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 70%;
+	padding: 6% 15%;
+	margin: 0 0;
+	height: auto;
+	overflow: hidden;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+}
+.carta {
+	width: 20%;
+	height: 100%;
+	align-items: center;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	margin-top: 5%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+	display: flex;
+	justify-content: center;
+}
+.exploraboton a {
+	text-decoration: none;
+}
+.explora {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.5em;
+	border: none;
+	border-radius: 20px;
+	cursor: pointer;
+	transition: .3s ease all;
+	position: relative;
+	overflow: hidden;
+}
+.explora span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: #202020;
+	transition: .1s ease all;
+}
+.explora.button::after {
+	content: "";
+	width: 1px;
+	height: 1px;
+	background: none;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left: 50%;
+	transition: .3s ease-in-out all;
+	border-radius: 50px;
+	transform-origin: center;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #FFD100;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 2%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.3em;
+}
+footer {
+	display: grid;
+	width: 80%;
+	height: auto;
+	background: #202020;
+	padding: 5% 10%;
+}
+.ubicacion {
+	width: 100%;
+	height: auto;
+}
+.ubicacion h1 {
+	width: 17%;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+	color: #FFD100;
+}
+.ubicacion h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	margin: 0 0;
+	margin-top: 3%;
+	font-weight: 700;
+	font-size: 3em;
+	color: #FFD100;
+}
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: right;
+  margin: 20px 0;
+  overflow: hidden;
+  background: #484848;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button .icon{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.6);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #202020;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper .button a {
+	text-decoration: none;
+}
+.wrapper4 .button4{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: right;
+  margin: -120px 0;
+  overflow: hidden;
+  background: #484848;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 200px;
+}
+.wrapper4 .button4 .icon4{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.4);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #202020;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper4 .button4 a {
+	text-decoration: none;
+}
+.wrapper2 .button2{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 30px 0;
+  overflow: hidden;
+  background: #484848;
+  margin-right: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 215px;
+}
+.wrapper2 .button2 .icon2{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.4);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #202020;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper2 .button2 a {
+	text-decoration: none;
+}
+.wrapper3 .button3{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 30px 0;
+  overflow: hidden;
+  background: #484848;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 200px;
+}
+.wrapper3 .button3 .icon3{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.6);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #202020;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper3 .button3 a {
+	text-decoration: none;
+}
+
+/*--------- PANTALLAS O LAPTOPS GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1680px) and (min-width: 1367px) and (orientation: landscape) {
+
+.logo {
+	padding: 0 5%;
+	width: 13%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 60%;
+	display: flex;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: #FFD100;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1%;
+  line-height: 1.2em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 70%;
+	padding: 6% 15%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 20%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.5em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: #202020;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #FFD100;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 2%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 19%;
+}
+.wrapper .button{
+  margin: 5em 0;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper4 .button4{
+  margin: -110px 0;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1367px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width:21%;
+	font-size: 6em;
+}
+
+}
+
+/*--------- LAPTOPS Y PANTALLAS DE PC PEQUEÑAS Y ALGUNAS TABLES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1366px) and (min-width: 1281px) and (orientation: landscape) {
+
+.logo {
+	padding: 0 5%;
+	width: 13%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 60%;
+	display: flex;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: #FFD100;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1%;
+  line-height: 1.2em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 70%;
+	padding: 0% 15%;
+	padding-top: 3%;
+	padding-bottom: 4%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 25%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.5em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: #202020;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #FFD100;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 2%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 23%;
+}
+.wrapper .button{
+  margin: 5em 0;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper4 .button4{
+  margin: -110px 0;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+
+}
+
+/*--------- LAPTOPS PEQUEÑAS Y ALGUNAS TABLES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1280px) and (min-width: 1195px) and (orientation: landscape) {
+
+.logo {
+	padding: 0 5%;
+	width: 13%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 60%;
+	display: flex;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: #FFD100;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 70%;
+	padding: 0% 15%;
+	padding-top: 3%;
+	padding-bottom: 4%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 26%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.5em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: #202020;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #FFD100;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 25%;
+}
+.wrapper .button{
+  margin: 5em 0;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper4 .button4{
+  margin: -110px 0;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+
+}
+
+/*--------- TABLES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1194px) and (min-width: 1000px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 17%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 3%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 20rem;
+  margin-top: 8.6%;
+  transform: scale(1.0);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 76%;
+	padding: 0% 12%;
+	padding-top: 1%;
+	padding-bottom: 7%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 32%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.5em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 27%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 1000px) and (orientation: landscape) {
+
+.slideshow-container {
+  max-width: 100%;
+  height: 18rem;
+  margin-top: 8%;
+  transform: scale(1.0);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 48%;
+  padding: 0.5% 1.2%;
+  line-height: 1.2em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+main {
+	width: 76%;
+	padding: 0% 12%;
+	padding-top: 1%;
+	padding-bottom: 7%;
+	margin: 0 0;
+}
+.ubicacion h1 {
+	width: 30%;
+}
+
+}
+
+
+/*--------- EMPIEZA VERSIÓN RESPONSIVE TABLET VERTICAL (1024x768) -------- */
+
+@media screen and (max-width: 1024px) and (min-width: 835px) and (orientation: portrait) {
+
+.barra {
+	width: 100%;
+	padding: 3.2% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.6em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 18rem;
+  margin-top: 13%;
+  transform: scale(1.2);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 76%;
+	padding: 0% 12%;
+	padding-top: 4%;
+	padding-bottom: 9%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 35%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.2em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+
+footer {
+	padding-bottom: 12%;
+}
+
+.ubicacion h1 {
+	width: 27%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+/*--------- TABLES MEDIANAS / PEQUEÑAS VERTICALMENTE -------- */
+
+@media screen and (max-width: 834px) and (min-width: 601px) and (orientation: portrait) {
+
+.barra {
+	width: 100%;
+	padding: 3.2% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.6em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 15rem;
+  margin-top: 19.8%;
+  transform: scale(1.6);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 76%;
+	padding: 0% 12%;
+	padding-top: 6%;
+	padding-bottom: 9%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 35%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.2em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 33%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+@media screen and (max-width: 768px) and (min-width: 601px) and (orientation: portrait) {
+
+/* Next & previous buttons */
+.prev, .next {
+  top: 53%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+.exploraboton {
+	top: 63%;
+}
+.ubicacion h1 {
+	width: 35%;
+	font-size: 5.1em;
+}
+
+}
+
+
+/* ----- TELEFONOS GRANDES HORIZONTALMENTE -------*/
+
+@media screen and (max-width: 926px) and (min-width: 787px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 18%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.5em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.6em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 15rem;
+  margin-top: 16.5%;
+  transform: scale(1.51);
+}
+/* Next & previous buttons */
+.prev, .next {
+	display: none;
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 76%;
+	padding: 0% 12%;
+	padding-top: 6%;
+	padding-bottom: 8%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 37%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.2em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 32%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+/*--------- TELEFONOS GRANDES VERTICALMENTE -------- */
+
+@media screen and (max-width: 428px) and (min-width: 380px) and (orientation: portrait) {
+
+.barra {
+  height: 5rem;
+}
+.logo {
+	width: 36%;
+	height: auto;
+	padding-left: 2rem;
+}
+.logo img {
+	width: 100%;
+}
+.btn_menu {
+	display: inline-flex;
+}
+.izquierda {
+	position: fixed;
+	width: 100vw;
+	border: none;
+	height: 39%;
+	background: #202020;
+	top: -100vh;
+	text-align: center;
+	transition: all .5s;
+	flex-direction: column;
+}
+.boton {
+  top: 5%;
+  left: 0px;
+	width: 90%;
+	margin: 0 0;
+	margin-bottom: 5%;
+	height: 2.9em;
+	font-size: 3em;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	color: white;
+	background: transparent;
+	transition: .2s ease all;
+}
+.boton.animado:hover {
+	background: transparent;
+	color: white;
+}
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: transparent;
+	stroke-width: 3px;
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+	transition: .6s ease all;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+.slideshow-container {
+	display: none;
+}
+/* INICIO DEL SLIDESHOW */
+.slideshow-container-celular {
+	max-width: 100%;
+	height: auto;
+	margin-top: 20%;
+	visibility: visible;
+}
+/* Hide the images by default */
+.mySlidescelular {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+}
+main {
+	width: 90%;
+	padding: 0% 5%;
+	padding-top: 15%;
+	padding-bottom: 16%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.carta {
+	width: 70%;
+	height: 100%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.9em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.4em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	margin-top: 5%;
+	padding-left: 0%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.3em;
+}
+.ubicacion h1 {
+	width: 65%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 10%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -110px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+@media screen and (max-width: 420px) and (min-width: 380px) and (orientation: portrait) {
+
+.ubicacion h1 {
+	width: 67%;
+	font-size: 5.1em;
+}
+
+}
+
+/* ----- TELEFONOS MEDIANOS HORIZONTALMENTE -------*/
+
+@media screen and (max-width: 786px) and (min-width: 668px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.4em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 12rem;
+  margin-top: 18%;
+  transform: scale(1.7);
+}
+/* Next & previous buttons */
+.prev, .next {
+	display: none;
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 80%;
+	padding: 0% 10%;
+	padding-top: 6%;
+	padding-bottom: 8%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 42%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	margin-top: 8%;
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.2em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.2em;
+}
+.ubicacion h1 {
+	width: 35%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+@media screen and (max-width: 760px) and (min-width: 668px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 36%;
+	font-size: 5.1em;
+}
+
+}
+
+@media screen and (max-width: 700px) and (min-width: 668px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 38%;
+	font-size: 5.1em;
+}
+
+}
+
+
+/*--------- TELEFONOS MEDIANOS VERTICALMENTE -------- */
+
+@media screen and (max-width: 379px) and (min-width: 321px) and (orientation: portrait) {
+
+.barra {
+  height: 5rem;
+}
+.logo {
+	width: 36%;
+	height: auto;
+	padding-left: 2rem;
+}
+.logo img {
+	width: 100%;
+}
+.btn_menu {
+	display: inline-flex;
+}
+.izquierda {
+	position: fixed;
+	width: 100vw;
+	background: #202020;
+	height: 49%;
+	top: -100vh;
+	text-align: center;
+	transition: all .5s;
+	flex-direction: column;
+}
+.exploraboton {
+	top: 65%;
+}
+.boton {
+  top: 5%;
+  left: 0px;
+	width: 90%;
+	margin: 0 0;
+	margin-bottom: 5%;
+	height: 2.9em;
+	font-size: 3em;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	color: white;
+	background: transparent;
+	transition: .2s ease all;
+}
+.boton.animado:hover {
+	background: transparent;
+	color: white;
+}
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: transparent;
+	stroke-width: 3px;
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+	transition: .6s ease all;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+.slideshow-container {
+	display: none;
+}
+/* INICIO DEL SLIDESHOW */
+.slideshow-container-celular {
+	max-width: 100%;
+	height: auto;
+	margin-top: 5%;
+	visibility: visible;
+}
+/* Hide the images by default */
+.mySlidescelular {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+}
+main {
+	width: 90%;
+	padding: 0% 5%;
+	padding-top: 15%;
+	padding-bottom: 16%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.carta {
+	width: 75%;
+	height: 100%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.9em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3.4em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	margin-top: 5%;
+	padding-left: 0%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.3em;
+}
+.ubicacion h1 {
+	width: 67%;
+	font-size: 5em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 10%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -110px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+@media screen and (max-width: 360px) and (min-width: 321px) and (orientation: portrait) {
+
+.ubicacion h1 {
+	width: 70%;
+	font-size: 5em;
+}
+
+}
+
+/* ----- TELEFONOS PEQUEÑOS HORIZONTALMENTE -------*/
+
+@media screen and (max-width: 667px) and (min-width: 568px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 18%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 12rem;
+  margin-top: 18.5%;
+  transform: scale(1.7);
+}
+/* Next & previous buttons */
+.prev, .next {
+	display: none;
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 80%;
+	padding: 0% 10%;
+	padding-top: 4%;
+	padding-bottom: 6%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+}
+.carta {
+	width: 42%;
+	height: 100%;
+	margin-right: 3%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	margin-top: 8%;
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.5em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 2.8em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	padding-left: 3%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 2.8em;
+}
+.ubicacion h1 {
+	width: 40%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -110px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+@media screen and (max-width: 660px) and (min-width: 568px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 40%;
+	font-size: 5.1em;
+}
+
+}
+
+@media screen and (max-width: 620px) and (min-width: 568px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 45%;
+	font-size: 5.1em;
+}
+
+}
+
+
+/*--------- TELEFONOS PEQUEÑOS VERTICALMENTE -------- */
+
+@media screen and (max-width: 320px) and (min-width: 300px) and (orientation: portrait) {
+
+.barra {
+  height: 4rem;
+}
+.logo {
+	width: 36%;
+	height: auto;
+	padding-left: 2rem;
+}
+.logo img {
+	width: 100%;
+}
+.btn_menu {
+	display: inline-flex;
+}
+.izquierda {
+	position: fixed;
+	width: 100vw;
+	background: #202020;
+	height: 49%;
+	top: -100vh;
+	text-align: center;
+	transition: all .5s;
+	flex-direction: column;
+}
+.boton {
+  top: 0;
+  left: 0;
+	width: 100%;
+	margin: 0 0;
+	margin-bottom: 5%;
+	height: 2.9em;
+	font-size: 3em;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	color: white;
+	font-size: 2.7em;
+	background: transparent;
+	transition: .2s ease all;
+}
+.boton.animado:hover {
+	background: transparent;
+	color: white;
+}
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: transparent;
+	stroke-width: 3px;
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+	transition: .6s ease all;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+.slideshow-container {
+	display: none;
+}
+/* INICIO DEL SLIDESHOW */
+.slideshow-container-celular {
+	max-width: 100%;
+	height: auto;
+	margin-top: 5%;
+	visibility: visible;
+}
+/* Hide the images by default */
+.mySlidescelular {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+}
+main {
+	width: 90%;
+	padding: 0% 5%;
+	padding-top: 15%;
+	padding-bottom: 16%;
+	margin: 0 0;
+}
+.servicio {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.carta {
+	width: 75%;
+	height: 100%;
+}
+.carta img {
+	width: 100%;
+}
+.exploraboton {
+	width: 100%;
+	height: auto;
+	position: relative;
+	z-index: 2;
+	top: 5%;
+}
+.explora {
+	width: 5.9em;
+	height: 2.5em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 3em;
+	border-radius: 20px;
+}
+.explora.button{
+	background: #202020;
+	color: white;
+	transition: .3s ease all;
+}
+.explora.button:hover{
+	color: white;
+	transition: .1s ease all;
+}
+.explora.button:hover::after {
+	transform: scale(400);
+	background: #202020;
+}
+.descripcion {
+	width: 95%;
+	margin-top: 5%;
+	padding-left: 0%;
+	height: auto;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+.ubicacion h1 {
+	width: 75%;
+	font-size: 4.8em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 10%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -100px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}

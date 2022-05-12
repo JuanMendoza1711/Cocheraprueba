@@ -1,0 +1,4543 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background: white;
+	font-size: 5px;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.barra {
+	width: 100%;
+	background: #202020;
+	height: auto;
+	border: #202020 0.1px solid;
+	overflow: hidden;
+	padding: 1.5% 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	z-index: 10;
+}
+.logo {
+	padding: 0 5%;
+	width: 12%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 50%;
+	display: flex;
+	border: #202020 0.1px solid;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 3em;
+	color: white;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: .6s ease all;
+	position: relative;
+	overflow: hidden;
+}
+.boton span {
+	position: relative;
+	z-index: 2;
+	transition: .3s ease all;
+}
+.boton.animado {
+	background: none;
+	width: 100%;
+	font-size: 3em;
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: #FFD100;
+	stroke-width: 3%;
+	stroke-dasharray: 450;
+	stroke-dashoffset: 450;
+	transition: .6s ease all;
+}
+
+.boton.animado:hover rect {
+	stroke-dashoffset: 0;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 15em;
+	left: 0;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 52%;
+  z-index: 5;
+  padding: 0.5% 1%;
+  color: white;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 5em;
+  transition: 0.6s ease;
+  border-radius: 50%;
+  user-select: none;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background:rgba(20, 20, 20, 0.9) ;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+main {
+	width: 70%;
+	padding: 0 15%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3.4em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* GALERIA 1 */
+
+.eventos {
+	width: 30%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(1.0);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 4%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 0;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 38%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #FFD100;
+	background: #202020;
+	transition: .3s ease-in-out all;
+}
+footer {
+	display: grid;
+	width: 80%;
+	height: auto;
+	background: #202020;
+	padding: 5% 10%;
+}
+.ubicacion {
+	width: 100%;
+	height: auto;
+}
+.ubicacion h1 {
+	width: 17%;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+	color: #FFD100;
+}
+.ubicacion h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	margin: 0 0;
+	margin-top: 3%;
+	font-weight: 700;
+	font-size: 3em;
+	color: #FFD100;
+}
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: right;
+  margin: 20px 0;
+  overflow: hidden;
+  background: #484848;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button .icon{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.6);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #202020;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper .button a {
+	text-decoration: none;
+}
+.wrapper4 .button4{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: right;
+  margin: -120px 0;
+  overflow: hidden;
+  background: #484848;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 200px;
+}
+.wrapper4 .button4 .icon4{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.4);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #202020;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper4 .button4 a {
+	text-decoration: none;
+}
+.wrapper2 .button2{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 30px 0;
+  overflow: hidden;
+  background: #484848;
+  margin-right: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 215px;
+}
+.wrapper2 .button2 .icon2{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.4);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #202020;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper2 .button2 a {
+	text-decoration: none;
+}
+.wrapper3 .button3{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 30px 0;
+  overflow: hidden;
+  background: #484848;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 200px;
+}
+.wrapper3 .button3 .icon3{
+	color: #FFD100;
+  display: inline-flex;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  line-height: 60px;
+  box-sizing: border-box;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #FFD100;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	text-decoration: none;
+	color: #FFD100;
+	text-align: center;
+	justify-content: center;
+	transform: scale(1.6);
+	line-height: 60px;
+  font-size: 20px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #202020;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 4em;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1) span{
+  color: #FFD100;
+}
+.wrapper3 .button3 a {
+	text-decoration: none;
+}
+
+/*--------- PANTALLAS O LAPTOPS GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1680px) and (min-width: 1367px) and (orientation: landscape) {
+
+.logo {
+	padding: 0 5%;
+	width: 13%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 60%;
+	display: flex;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: #FFD100;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1%;
+  line-height: 1.2em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 80%;
+	padding: 0 10%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5.5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.4em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5.5em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.eventos {
+	width: 32%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(1.0);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.5%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 0;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 38%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #FFD100;
+	background: #202020;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 19%;
+}
+.wrapper .button{
+  margin: 5em 0;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper4 .button4{
+  margin: -110px 0;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1367px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width:21%;
+	font-size: 6em;
+}
+
+}
+
+/*--------- LAPTOPS Y PANTALLAS DE PC PEQUEÑAS Y ALGUNAS TABLES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1366px) and (min-width: 1281px) and (orientation: landscape) {
+
+.logo {
+	padding: 0 5%;
+	width: 13%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 60%;
+	display: flex;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: #FFD100;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1%;
+  line-height: 1.2em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 80%;
+	padding: 0 10%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5.5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.4em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5.5em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.eventos {
+	width: 32%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(1.0);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.5%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 0;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 37%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #FFD100;
+	background: #202020;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 23%;
+}
+.wrapper .button{
+  margin: 5em 0;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper4 .button4{
+  margin: -110px 0;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+
+}
+
+/*--------- LAPTOPS PEQUEÑAS Y ALGUNAS TABLES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1280px) and (min-width: 1195px) and (orientation: landscape) {
+
+.logo {
+	padding: 0 5%;
+	width: 13%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 60%;
+	display: flex;
+	margin-right: 5%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 7%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: #FFD100;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: #FFD100;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  margin-top: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 50%;
+  padding: 0.5% 1%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 80%;
+	padding: 0 10%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5.5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.4em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5.5em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.eventos {
+	width: 35%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(1.0);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.5%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 0;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 37%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #FFD100;
+	background: #202020;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 25%;
+}
+.wrapper .button{
+  margin: 5em 0;
+}
+.wrapper .button span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper4 .button4{
+  margin: -110px 0;
+}
+.wrapper4 .button4 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper3 .button3 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+.wrapper2 .button2 span{
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3.5em;
+}
+
+}
+
+/*--------- TABLES GRANDES HORIZONTALMENTE -------- */
+
+@media screen and (max-width: 1194px) and (min-width: 1000px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 17%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 3%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.7em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 18rem;
+  margin-top: 8%;
+  transform: scale(1.1);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 56%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 80%;
+	padding: 0 10%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5.5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.4em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5.5em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.eventos {
+	width: 36%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 37%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 35.5%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 27%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+@media screen and (max-width: 1024px) and (min-width: 1000px) and (orientation: landscape) {
+
+.slideshow-container {
+  max-width: 100%;
+  height: 17rem;
+  margin-top: 10%;
+  transform: scale(1.1);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 53%;
+  padding: 0.5% 1.2%;
+  line-height: 1.2em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.ubicacion h1 {
+	width: 30%;
+}
+
+}
+
+
+/*--------- TABLES GRANDES VERTICALMENTE -------- */
+
+@media screen and (max-width: 1024px) and (min-width: 835px) and (orientation: portrait) {
+
+.barra {
+	width: 100%;
+	padding: 3.2% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.6em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 15rem;
+  margin-top: 16%;
+  transform: scale(1.5);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 57%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 86%;
+	padding: 0 7%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5.5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.4em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5.5em;
+	margin-bottom: 5%;
+	margin-top: 8%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.eventos {
+	width: 60%;
+	margin: 0% 0%;
+	margin-top: 3%;
+	margin-bottom: 5%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6.5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 4em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 39%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 27%;
+	font-size: 5.5em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+/*--------- TABLES MEDIANAS / PEQUEÑAS VERTICALMENTE -------- */
+
+@media screen and (max-width: 834px) and (min-width: 601px) and (orientation: portrait) {
+
+.barra {
+	width: 100%;
+	padding: 3.2% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.6em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 15rem;
+  margin-top: 20%;
+  transform: scale(1.6);
+}
+/* Next & previous buttons */
+.prev, .next {
+  top: 55%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 86%;
+	padding: 0 7%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5.5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.4em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5.5em;
+	margin-bottom: 5%;
+	margin-top: 8%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.eventos {
+	width: 60%;
+	margin: 0% 0%;
+	margin-top: 3%;
+	margin-bottom: 5%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 6em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 38%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 33%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+@media screen and (max-width: 768px) and (min-width: 601px) and (orientation: portrait) {
+
+/* Next & previous buttons */
+.prev, .next {
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.ubicacion h1 {
+	width: 35%;
+	font-size: 5.1em;
+}
+
+}
+
+/* ----- TELEFONOS GRANDES HORIZONTALMENTE -------*/
+
+@media screen and (max-width: 926px) and (min-width: 787px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.5em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 15rem;
+  margin-top: 16%;
+  transform: scale(1.5);
+}
+/* Next & previous buttons */
+.prev, .next {
+	display: none;
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 90%;
+	padding: 0 5%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.2em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.eventos {
+	width: 40%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 32%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 5.5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 52%;
+	left: 35%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 32%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+/*--------- TELEFONOS GRANDES VERTICALMENTE -------- */
+
+@media screen and (max-width: 428px) and (min-width: 380px) and (orientation: portrait) {
+
+.barra {
+  height: 5rem;
+}
+.logo {
+	width: 36%;
+	height: auto;
+	padding-left: 2rem;
+}
+.logo img {
+	width: 100%;
+}
+.btn_menu {
+	display: inline-flex;
+}
+.izquierda {
+	position: fixed;
+	width: 100vw;
+	border: none;
+	height: 39%;
+	background: #202020;
+	top: -100vh;
+	text-align: center;
+	transition: all .5s;
+	flex-direction: column;
+}
+.boton {
+  top: 5%;
+  left: 0px;
+	width: 90%;
+	margin: 0 0;
+	margin-bottom: 5%;
+	height: 2.9em;
+	font-size: 3em;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	color: white;
+	background: transparent;
+	transition: .2s ease all;
+}
+.boton.animado:hover {
+	background: transparent;
+	color: white;
+}
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: transparent;
+	stroke-width: 3px;
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+	transition: .6s ease all;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+.slideshow-container {
+	display: none;
+}
+/* INICIO DEL SLIDESHOW */
+.slideshow-container-celular {
+	max-width: 100%;
+	height: auto;
+	margin-top: 20%;
+	visibility: visible;
+}
+/* Hide the images by default */
+.mySlidescelular {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 90%;
+	padding: 0 5%;
+	padding-top: 10%;
+	padding-bottom: 1%;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 100%;
+	padding: 0 0;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.2em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5em;
+	margin-bottom: 11%;
+	margin-top: 15%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.eventos {
+	width: 100%;
+	margin: 0% 0%;
+	margin-top: 3%;
+	margin-bottom: 15%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 5.5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 37.5%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 65%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 10%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -110px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+@media screen and (max-width: 420px) and (min-width: 380px) and (orientation: portrait) {
+
+.ubicacion h1 {
+	width: 67%;
+	font-size: 5.1em;
+}
+
+}
+
+/* ----- TELEFONOS MEDIANOS HORIZONTALMENTE -------*/
+
+@media screen and (max-width: 786px) and (min-width: 668px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2.4em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 12rem;
+  margin-top: 18%;
+  transform: scale(1.7);
+}
+/* Next & previous buttons */
+.prev, .next {
+	display: none;
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 90%;
+	padding: 0 5%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.2em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.eventos {
+	width: 40%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 38%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 54%;
+	left: 34.5%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 35%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  margin: 30px 0;
+  height: 50px;
+  width: 50px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 50px;
+}
+.wrapper .button .icon{
+  height: 50px;
+  width: 50px;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  margin: -100px 0;
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:hover{
+  width: 50px;
+}
+.wrapper4 .button4 .icon4{
+  height: 50px;
+  width: 50px;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:hover{
+  width: 50px;
+}
+.wrapper2 .button2 .icon2{
+  height: 50px;
+  width: 50px;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:hover{
+  width: 50px;
+}
+.wrapper3 .button3 .icon3{
+  height: 50px;
+  width: 50px;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 50px;
+  font-size: 18px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+@media screen and (max-width: 760px) and (min-width: 668px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 36%;
+	font-size: 5.1em;
+}
+.content h2 {
+	top: 37%;
+	left: 49.5%;
+}
+.btn {
+	top: 53%;
+	left: 34%;
+}
+
+}
+
+@media screen and (max-width: 700px) and (min-width: 668px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 38%;
+	font-size: 5.1em;
+}
+.content h2 {
+	top: 37%;
+	left: 49.5%;
+}
+.btn {
+	top: 53%;
+	left: 33.5%;
+}
+
+}
+
+
+/*--------- TELEFONOS MEDIANOS VERTICALMENTE -------- */
+
+@media screen and (max-width: 379px) and (min-width: 321px) and (orientation: portrait) {
+
+.barra {
+  height: 5rem;
+}
+.logo {
+	width: 36%;
+	height: auto;
+	padding-left: 2rem;
+}
+.logo img {
+	width: 100%;
+}
+.btn_menu {
+	display: inline-flex;
+}
+.izquierda {
+	position: fixed;
+	width: 100vw;
+	background: #202020;
+	height: 49%;
+	top: -100vh;
+	text-align: center;
+	transition: all .5s;
+	flex-direction: column;
+}
+.exploraboton {
+	top: 65%;
+}
+.boton {
+  top: 5%;
+  left: 0px;
+	width: 90%;
+	margin: 0 0;
+	margin-bottom: 5%;
+	height: 2.9em;
+	font-size: 3em;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	color: white;
+	background: transparent;
+	transition: .2s ease all;
+}
+.boton.animado:hover {
+	background: transparent;
+	color: white;
+}
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: transparent;
+	stroke-width: 3px;
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+	transition: .6s ease all;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+.slideshow-container {
+	display: none;
+}
+/* INICIO DEL SLIDESHOW */
+.slideshow-container-celular {
+	max-width: 100%;
+	height: auto;
+	margin-top: 5%;
+	visibility: visible;
+}
+/* Hide the images by default */
+.mySlidescelular {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 90%;
+	padding: 0 5%;
+	padding-top: 10%;
+	padding-bottom: 1%;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 100%;
+	padding: 0 0;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 5em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3.2em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 5em;
+	margin-bottom: 11%;
+	margin-top: 15%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.eventos {
+	width: 100%;
+	margin: 0% 0%;
+	margin-top: 3%;
+	margin-bottom: 15%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 5.5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.7em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 37%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 67%;
+	font-size: 5em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 10%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -110px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+@media screen and (max-width: 360px) and (min-width: 321px) and (orientation: portrait) {
+
+.ubicacion h1 {
+	width: 70%;
+	font-size: 5em;
+}
+.btn {
+	top: 55%;
+	left: 36%;
+}
+
+}
+
+
+/* ----- TELEFONOS PEQUEÑOS HORIZONTALMENTE -------*/
+
+@media screen and (max-width: 667px) and (min-width: 568px) and (orientation: landscape) {
+
+.barra {
+	width: 100%;
+	padding: 2.5% 0;
+}
+.logo {
+	padding: 0 3%;
+	width: 19%;
+	height: auto;
+}
+.logo img {
+	width: 100%;
+}
+.izquierda {
+	width: 70%;
+	display: flex;
+	margin-right: 0%;
+}
+.boton {
+	margin: 0 0;
+	margin-left: 2%;
+	height: 2.9em;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	font-size: 2em;
+}
+.boton.animado:hover {
+	color: white;
+	transition: .1s ease all;
+}
+.boton.animado rect {
+	stroke: none;
+}
+.btn_menu {
+	margin-right: 30px;
+	font-size: 25px;
+	color: white;
+	cursor: pointer;
+	display: none;
+}
+div.show {
+	top: 75px;
+}
+
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  height: 12rem;
+  margin-top: 20%;
+  transform: scale(1.7);
+}
+/* Next & previous buttons */
+.prev, .next {
+	display: none;
+  top: 52%;
+  padding: 0.5% 1.2%;
+  line-height: 1.1em;
+  font-size: 5em;
+  border-radius: 50%;
+}
+.prev {
+	left: 3%;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 3%;
+  border-radius: 50%;
+}
+.slideshow-container-celular {
+	visibility: hidden;
+	height: 0px;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 90%;
+	padding: 0 5%;
+	margin: 5% 0;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 90%;
+	padding: 0 5%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 4em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 4em;
+	margin-bottom: 5%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.eventos {
+	width: 40%;
+	margin: 3% 3%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 32%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 4.5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.3em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 52%;
+	left: 34.5%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 40%;
+	font-size: 5.1em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 6%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -110px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
+
+
+@media screen and (max-width: 660px) and (min-width: 568px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 40%;
+	font-size: 5.1em;
+}
+.btn {
+	top: 52%;
+	left: 33.5%;
+}
+
+}
+
+@media screen and (max-width: 620px) and (min-width: 568px) and (orientation: landscape) {
+
+.ubicacion h1 {
+	width: 45%;
+	font-size: 5.1em;
+}
+.btn {
+	top: 52%;
+	left: 32.5%;
+}
+
+}
+
+
+/*--------- TELEFONOS PEQUEÑOS VERTICALMENTE -------- */
+
+@media screen and (max-width: 320px) and (min-width: 300px) and (orientation: portrait) {
+
+.barra {
+  height: 4rem;
+}
+.logo {
+	width: 36%;
+	height: auto;
+	padding-left: 2rem;
+}
+.logo img {
+	width: 100%;
+}
+.btn_menu {
+	display: inline-flex;
+}
+.izquierda {
+	position: fixed;
+	width: 100vw;
+	background: #202020;
+	height: 49%;
+	top: -100vh;
+	text-align: center;
+	transition: all .5s;
+	flex-direction: column;
+}
+.boton {
+  top: 0;
+  left: 0;
+	width: 100%;
+	margin: 0 0;
+	margin-bottom: 5%;
+	height: 2.9em;
+	font-size: 3em;
+	font-weight: 700;
+}
+.boton.animado {
+	width: 100%;
+	color: white;
+	font-size: 2.7em;
+	background: transparent;
+	transition: .2s ease all;
+}
+.boton.animado:hover {
+	background: transparent;
+	color: white;
+}
+.boton.animado svg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}
+.boton.animado rect {
+	width: 100%;
+	height: 100%;
+	stroke: transparent;
+	stroke-width: 3px;
+	stroke-dasharray: 850;
+	stroke-dashoffset: 850;
+	transition: .6s ease all;
+}
+/* ----- Fin de Barra de navegación -------*/
+
+header {
+	width: 100%;
+	height: auto;
+	margin: none;
+	padding: none;
+	position: relative;
+	overflow: hidden;
+}
+header img {
+	width: 100%;
+}
+/* INICIO DEL SLIDESHOW */
+
+.slideshow-container {
+	display: none;
+}
+/* INICIO DEL SLIDESHOW */
+.slideshow-container-celular {
+	max-width: 100%;
+	height: auto;
+	margin-top: 5%;
+	visibility: visible;
+}
+/* Hide the images by default */
+.mySlidescelular {
+  display: none;
+}
+/* Next & previous buttons */
+.prev, .next {
+  display: none;
+}
+h3 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 4em;	
+}
+h4 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 600;
+	font-size: 3em;
+}
+h2 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	font-size: 5em;
+}
+p {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 500;
+	font-size: 3em;
+}
+h1 {
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 800;
+	font-size: 6em;
+}
+main {
+	width: 90%;
+	padding: 0 5%;
+	padding-top: 10%;
+	padding-bottom: 1%;
+	height: auto;
+	overflow: hidden;
+}
+.cochera {
+	width: 100%;
+	padding: 0 0;
+	height: auto;
+	display: flex;
+	justify-content: center;
+}
+.texto {
+	width: 80%;
+	padding: 5%;
+	height: auto;
+	background: #202020;
+	border-radius: 30px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+}
+.texto h1 {
+	color: #FFD100;
+	text-align: center;
+	font-size: 4em;
+}
+.texto p {
+	margin-top: 5%;
+	color: #FFD100;
+	font-size: 3em;
+}
+.galeria {
+	margin-top: 5%;
+}
+.galeria h1 {
+	text-align: center;
+	font-size: 4em;
+	margin-bottom: 11%;
+	margin-top: 15%;
+}
+.caja-eventos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.eventos {
+	width: 100%;
+	margin: 0% 0%;
+	margin-top: 3%;
+	margin-bottom: 15%;
+	position: relative;
+}
+.eventos img {
+	filter: brightness(0.4);
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 30px;
+	transition: .5s ease;
+}
+.eventos:hover img {
+	filter: brightness(0.4);
+}
+.content h2 {
+	position: absolute;
+	top: 40%;
+	left: 49.5%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	font-size: 4.5em;
+	color: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.content .btn {
+	font-size: 3.2em;
+	display: block;
+	background: #FFD100;
+	text-align: center;
+	padding: 2% 3.6%;
+	cursor: pointer;
+}
+.overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.eventos:hover .overlay {
+	opacity: 1;
+	transition: .2s ease-in-out all;
+}
+.btn {
+	position: absolute;
+	top: 55%;
+	left: 36.5%;
+	color: #202020;
+	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-weight: 700;
+	justify-content: center;
+	border-radius: 17px;
+	transition: .3s ease-in-out all;
+}
+.btn:hover {
+	color: #202020;
+	background: #FFD100;
+	transition: .3s ease-in-out all;
+}
+.ubicacion h1 {
+	width: 75%;
+	font-size: 4.8em;
+}
+.ubicacion h4 {
+	margin: 0 0;
+	margin-top: 10%;
+}
+.wrapper .button{
+  height: 45px;
+  width: 45px;
+  margin: 20px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 45px;
+}
+.wrapper .button .icon{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper .button .icon a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon a{
+  color: #FFD100;
+}
+.wrapper4 .button4{
+  height: 45px;
+  width: 45px;
+  margin: -100px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:hover{
+  width: 45px;
+}
+.wrapper4 .button4 .icon4{
+  height: 45px;
+  width: 45px;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4 .icon4 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper4 .button4:nth-child(1):hover .icon4{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper4 .button4:hover .icon4 a{
+  color: #FFD100;
+}
+.wrapper2 .button2{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  margin-right: 30px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:hover{
+  width: 45px;
+}
+.wrapper2 .button2 .icon2{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2 .icon2 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper2 .button2:nth-child(1):hover .icon2{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper2 .button2:hover .icon2 a{
+  color: #FFD100;
+}
+.wrapper3 .button3{
+  height: 45px;
+  width: 45px;
+  margin: 30px 0;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:hover{
+  width: 45px;
+}
+.wrapper3 .button3 .icon3{
+  height: 45px;
+  width: 45px;
+  border-radius: 50px;
+  line-height: 60px;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3 .icon3 a{
+	line-height: 45px;
+  font-size: 17px;
+  transition: all 0.3s ease-out;
+}
+.wrapper3 .button3:nth-child(1):hover .icon3{
+  background: #484848;
+  transition: .3s ease-in-out all;
+}
+.wrapper3 .button3:hover .icon3 a{
+  color: #FFD100;
+}
+
+}
